@@ -91,16 +91,19 @@ const ImageDetails = () => {
   // };
 
   const handleWhatsAppPurchase = () => {
-    if (!image) return;
-    
+    // Check if image exists and has necessary properties
+    if (!image || !image.title || !image.price) return;
+  
+    // Construct the message
     const message = encodeURIComponent(
-      `Hi! I'm interested in purchasing the photo "${image.title}" for $₹{image.price}.`
+      `Hi! I'm interested in purchasing the photo "${image.title}" for ₹${image.price}.`
     );
-    
-    // Use your custom WhatsApp number in the link
-    const phoneNumber = '7678674553';
+  
+    // Use your custom WhatsApp number in the link (with international format)
+    const phoneNumber = '917678674553';  // Example: India, phone number +91 7678674553
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
+  
   
 
   if (loading) {
