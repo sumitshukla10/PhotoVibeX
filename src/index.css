@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* CSS for the camera icon animation */
+.camera-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.camera-icon:hover {
+  transform: rotate(360deg); /* Rotate the icon on hover */
+  color: #3b82f6;  /* Change color on hover */
+}
