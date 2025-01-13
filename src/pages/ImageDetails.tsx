@@ -94,7 +94,7 @@ const ImageDetails = () => {
     if (!image) return;
     
     const message = encodeURIComponent(
-      `Hi! I'm interested in purchasing the photo "${image.title}" for $${image.price}.`
+      `Hi! I'm interested in purchasing the photo "${image.title}" for $₹{image.price}.`
     );
     
     // Use your custom WhatsApp number in the link
@@ -146,7 +146,7 @@ const ImageDetails = () => {
                 onClick={handleWhatsAppPurchase}
                 className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
               >
-                Purchase ${image.price}
+                Purchase ₹ {image.price}
               </button>
             </div>
             

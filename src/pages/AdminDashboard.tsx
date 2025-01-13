@@ -220,7 +220,7 @@ const AdminDashboard = () => {
                 <h3 className="font-medium">{image.title}</h3>
                 <p className="text-sm text-gray-600 truncate">{image.description}</p>
                 <p className="text-sm text-gray-500">
-                ₹{image.price} • {formatDistanceToNow(image.createdAt, { addSuffix: true })}
+                ${image.price} • {formatDistanceToNow(image.createdAt, { addSuffix: true })}
                 </p>
               </div>
 
